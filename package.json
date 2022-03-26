@@ -21,7 +21,9 @@
     "windows-store": "node ./script/windows-store.js",
     "release": "node ./script/release.js",
     "prepack": "check-for-leaks",
-    "prepush": "check-for-leaks"
+    "prepush": "check-for-leaks",
+    "prepare": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "repository": "https://github.com/electron/electron-api-demos",
   "keywords": [
@@ -56,11 +58,13 @@
     "electron-shortcut-normalizer": "^1.0.0",
     "glob": "^7.1.0",
     "highlight.js": "^9.3.0",
-    "update-electron-app": "^1.1.1"
+    "update-electron-app": "^1.1.1",
+    "@snyk/protect": "latest"
   },
   "standard": {
     "env": {
       "mocha": true
     }
-  }
+  },
+  "snyk": true
 }
